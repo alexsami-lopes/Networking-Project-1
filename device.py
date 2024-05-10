@@ -123,4 +123,3 @@ class Dispositivo:
 if __name__ == "__main__":
     dispositivo = Dispositivo()
 
-
