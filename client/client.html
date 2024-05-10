@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Controle de Dispositivo</title>
+<style>
+    input[type="text"] {
+        width: 300px; /* Defina a largura desejada aqui */
+    }
+
+    #response, #error, #request-details {
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .hidden {
+        display: none; /* Esconder elemento por padrão */
+    }
+</style>
+</head>
+<body>
+
+<h2>Controle de Dispositivo</h2>
+
+<label for="server_address">Endereço IP e Porta do Servidor (IP:Porta):</label>
+<input type="text" id="server_address" placeholder="(por exemplo, 192.168.1.100:5000)"><br><br>
+
+<label for="device_ip">IP do Dispositivo (IPv4):</label>
+<input type="text" id="device_ip" placeholder="(por exemplo, 192.168.1.10)"><br><br>
+
+<button onclick="startTemperature()">Solicitar Temperatura</button>
+<button onclick="stopTemperature()">Parar Temperatura</button>
+<button onclick="requestVentStatus()">Status da Escotilha</button>
+<button onclick="openVent()">Abrir Escotilha</button>
+<button onclick="closeVent()">Fechar Escotilha</button>
+
+
+<div id="response"></div>
+<button onclick="toggleVerbose()">Verbose</button>
+<div id="verbose-settings" class="hidden">
+    
+    <div id="error"></div>
+    <div id="request-details"></div>
+</div>
+
+
+
+<script>
+var temperatureInterval; // Identificador do intervalo para parar posteriormente
+
+function isValidIPAddress(ip) {
+    // Expressão regular para verificar se é um IP válido
+    var ipRegex = /^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+    return ipRegex.test(ip);
+}
+
+function isValidServerAddress(address) {
+    // Expressão regular para verificar se é um endereço de servidor válido (IP:Porta)
+    var serverAddressRegex = /^(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}:\d{1,5})$/;
+    return serverAddressRegex.test(address);
+}
+
+function sendRequest(url) {
+    var server_address = document.getElementById("server_address").value;
+    var device_ip = document.getElementById("device_ip").value;
+
+    if (!isValidServerAddress(server_address) || !isValidIPAddress(device_ip)) {
+        alert("Por favor, insira um endereço IP e porta válidos para o servidor e um IP válido para o dispositivo.");
+        return;
+    }
+
+    // Concatenar o IP do dispositivo na URL
+    url = "http://" + server_address + url + "/" + device_ip;
+
+    // Construir detalhes da requisição
+    var requestDetails = {
+        method: 'GET',
+        url: url,
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+
+    // Exibir detalhes da requisição
+    document.getElementById("request-details").innerHTML = JSON.stringify(requestDetails, null, 2);
+
+    fetch(url)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro ao fazer requisição: ' + response.status);
+        }
+        return response.text();
+    })
+    .then(data => {
+        // Exibir o retorno da requisição na div com o id "response"
+        document.getElementById("response").innerHTML = data;
+        document.getElementById("error").innerHTML = ''; // Limpar caixa de erro se houver
+    })
+    .catch(error => {
+        // Exibir erros na div com o id "error"
+        document.getElementById("error").innerHTML = error.message;
+        stopTemperature();
+        stopTemperature();
+        stopTemperature();
+        var verboseSettings = document.getElementById("verbose-settings");
+        // Mostrar as configurações verbosas
+        if (verboseSettings.classList.contains("hidden")) {
+            verboseSettings.classList.remove("hidden");
+        } 
+    });
+}
+
+function startTemperature() {
+    // Iniciar o loop de atualização da temperatura a cada segundo
+    temperatureInterval = setInterval(requestTemperature, 1000);
+}
+
+function stopTemperature() {
+    // Parar o loop de atualização da temperatura
+    clearInterval(temperatureInterval);
+    temperatureInterval = "";
+}
+
+function requestTemperature() {
+    // Enviar solicitação de temperatura
+    sendRequest('/temperature');
+    sendRequest('/temperature');
+}
+
+function requestVentStatus() {
+    // Enviar solicitação de status da escotilha
+    sendRequest('/vent-status');
+    sendRequest('/vent-status');
+}
+
+function openVent() {
+    // Enviar solicitação para abrir a escotilha
+    sendRequest('/vent-open');
+    sendRequest('/vent-open');
+}
+
+function closeVent() {
+    // Enviar solicitação para fechar a escotilha
+    sendRequest('/vent-close');
+    sendRequest('/vent-close');
+}
+
+function toggleVerbose() {
+    var verboseSettings = document.getElementById("verbose-settings");
+    // Alternar entre mostrar e esconder as configurações verbosas
+    if (verboseSettings.classList.contains("hidden")) {
+        verboseSettings.classList.remove("hidden");
+    } else {
+        verboseSettings.classList.add("hidden");
+    }
+}
+</script>
+
+</body>
+</html>
