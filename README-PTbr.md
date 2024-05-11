@@ -4,6 +4,25 @@
 # Descrição
 Este software simula um dispositivo equipado com um sensor de temperatura que controla uma janela de ventilação em um ambiente de estufa. Ele opera por meio de uma arquitetura de broker-client, onde o dispositivo simulado se comunica com um broker. O cliente, por sua vez, interage com a janela de ventilação, via broker, gerenciando suas operações com base nas leituras de temperatura recebidas do dispositivo. Além disso, o sistema fornece dados de temperatura em tempo real em Celsius (°C) para monitorar efetivamente o ambiente da estufa. O dispositivo se comunica com o broker via TCP/IP usando sockets, enquanto o broker se comunica com o cliente via RESTFUL. O dispositivo oscila entre 17ºC e 32°C a uma taxa de 0,1°C/s. Quando a janela está "Fechada", a temperatura começa a subir a uma taxa de 0,1°C/s e quando a janela está "Aberta", ocorre o oposto.
 
+# Tabela de Conteúdos
+
+1. [Projeto de Rede 1: IoT](#projeto-de-rede-1-iot)
+2. [Descrição](#descrição)
+3. [Requisitos](#requisitos)
+4. [Instalação do Docker](#instalação-do-docker)
+    - [Instalação do Docker no Linux](#instalação-do-docker-no-linux)
+    - [Instalação do Docker no Windows](#instalação-do-docker-no-windows)
+    - [Instalação do Docker no macOS](#instalação-do-docker-no-macos)
+5. [Como configurar o servidor usando Docker](#como-configurar-o-servidor-usando-docker)
+6. [Como configurar o dispositivo usando Docker](#como-configurar-o-dispositivo-usando-docker)
+7. [Como configurar o cliente usando Docker](#como-configurar-o-cliente-usando-docker)
+8. [Como executar o cliente](#como-executar-o-cliente)
+9. [Como configurar o cliente para se conectar ao servidor](#como-configurar-o-cliente-para-se-conectar-ao-servidor)
+10. [Análise Final](#análise-final)
+11. [Material de pesquisa adicional usado neste projeto](#material-de-pesquisa-adicional-usado-neste-projeto)
+
+
+
 ## Requisitos
   * Docker instalado
 
@@ -92,4 +111,6 @@ Este guia fornece instruções sobre como instalar o Docker em diferentes sistem
  O objetivo deste projeto foi alcançado! Aprendi a usar sockets para comunicar usando conexões TCP e UDP, além de usar o Flask para fazer uma comunicação RESTFUL entre um cliente e um servidor e como criar uma arquitetura de broker-client.
 
 # Material de pesquisa adicional usado neste projeto
- - [Retornar para a Tabela de Conteúdos](#table-of-contents)
+
+
+ - [Retornar para a Tabela de Conteúdos](#tabela-de-conteudos)
