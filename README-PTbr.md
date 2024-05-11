@@ -79,13 +79,14 @@ Este guia fornece instruções sobre como instalar o Docker em diferentes sistem
 [Imagem da GUI do Cliente em uso](#image-of-the-client-gui-in-use)
 
 # Imagem do Servidor em uso
-<img src="https://github.com/alexsami-lopes/Digital-Systems-Project-1/blob/15edc915f0052c32c2efb64937aee7c13ad9caed/images/Imagem-da-Protoboard.jpeg" alt="Server" width="800" height="600">
+<img src="images/image-server-in-use.jpg" alt="Server" width="1671" height="846">
 
 # Imagem do Dispositivo em uso
-<img src="https://github.com/alexsami-lopes/Digital-Systems-Project-1/blob/15edc915f0052c32c2efb64937aee7c13ad9caed/images/Imagem-da-Protoboard.jpeg" alt="Device" width="800" height="600">
+<img src="images/image-device-in-use.jpg" alt="Device" width="1671" height="446">
 
 # Imagem da GUI do Cliente em uso
-<img src="https://github.com/alexsami-lopes/Digital-Systems-Project-1/blob/15edc915f0052c32c2efb64937aee7c13ad9caed/images/Imagem-da-Protoboard.jpeg" alt="Client-GUI" width="800" height="600">
+<img src="images/image-client-in-use.jpg" alt="Client-GUI" width="969" height="645">
+
 
 # Análise Final
  O objetivo deste projeto foi alcançado! Aprendi a usar sockets para comunicar usando conexões TCP e UDP, além de usar o Flask para fazer uma comunicação RESTFUL entre um cliente e um servidor e como criar uma arquitetura de broker-client.
