@@ -102,7 +102,7 @@ Este guia fornece instruções sobre como executar o aplicativo para recuperar d
    #### Na caixa "IP do Dispositivo (IPv4)", copie e cole o endereço do dispositivo fornecido a você no terminal do dispositivo (sem porta), conforme visto na [Imagem do Dispositivo em uso](#imagem-do-dispositivo-em-uso), exemplo:
     1. 172.16.103.9
 
-### Clique em "Temperatura" e em outros botões e aguarde alguns segundos para receber dados do dispositivo
+### Clique em "Solicitar Temperatura" e em outros botões e aguarde alguns segundos para receber dados do dispositivo
 [Imagem da GUI do Cliente em uso](#imagem-da-gui-do-cliente-em-uso)
 
 # Imagens
