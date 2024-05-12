@@ -123,6 +123,7 @@ Images showing the server, device and client being used.
  The objective of this project was achieved! I've learned how to use sockets to communicate using TCP and UDP connections, as well as using Flask to make a RESTFUL communication between a client and a server and how to create a broker-client architecture.
 
 # Additional research material used in this project
+ [![Python Socket Programming Tutorial](https://raw.githubusercontent.com/alexsami-lopes/Networking-Project-1/main/images/Python%20Socket%20Programming%20Tutorial%20-%20Image.png)](https://www.youtube.com/watch?v=3QiPPX-KeSc)
 
 
  - [Return to Table of Contents](#table-of-contents)
