@@ -6,20 +6,25 @@ Este software simula um dispositivo equipado com um sensor de temperatura que co
 
 # Tabela de Conteúdos
 
-1. [Projeto de Rede 1: IoT](#projeto-de-rede-1-iot)
-2. [Descrição](#descrição)
-3. [Requisitos](#requisitos)
-4. [Instalação do Docker](#instalação-do-docker)
+1. [Descrição](#descrição)
+2. [Requisitos](#requisitos)
+3. [Instalação do Docker](#instalação-do-docker)
     - [Instalação do Docker no Linux](#instalação-do-docker-no-linux)
     - [Instalação do Docker no Windows](#instalação-do-docker-no-windows)
     - [Instalação do Docker no macOS](#instalação-do-docker-no-macos)
-5. [Como configurar o servidor usando Docker](#como-configurar-o-servidor-usando-docker)
-6. [Como configurar o dispositivo usando Docker](#como-configurar-o-dispositivo-usando-docker)
-7. [Como configurar o cliente usando Docker](#como-configurar-o-cliente-usando-docker)
-8. [Como executar o cliente](#como-executar-o-cliente)
-9. [Como configurar o cliente para se conectar ao servidor](#como-configurar-o-cliente-para-se-conectar-ao-servidor)
-10. [Análise Final](#análise-final)
-11. [Material de pesquisa adicional usado neste projeto](#material-de-pesquisa-adicional-usado-neste-projeto)
+4. [Como configurar](#como-configurar)
+   - [Como configurar o servidor usando Docker](#como-configurar-o-servidor-usando-docker)
+   - [Como configurar o dispositivo usando Docker](#como-configurar-o-dispositivo-usando-docker)
+   - [Como configurar o cliente usando Docker](#como-configurar-o-cliente-usando-docker)
+5. [Como Excecutar o Aplicativo](#como-executar-o-aplicativo) 
+   - [Como executar o cliente](#como-executar-o-cliente)
+   - [Como configurar o cliente para se conectar ao servidor](#como-configurar-o-cliente-para-se-conectar-ao-servidor)
+6. [Imagens](#imagens)
+   - [Imagem do Servidor em uso](#imagem-do-servidor-em-uso)
+   - [Imagem do Dispositivo em uso](#imagem-do-dispositivo-em-uso)
+   - [Imagem da GUI do Cliente em uso](#imagem-da-gui-do-cliente-em-uso)
+8. [Análise Final](#análise-final)
+9. [Material de pesquisa adicional usado neste projeto](#material-de-pesquisa-adicional-usado-neste-projeto)
 
 
 
@@ -61,28 +66,31 @@ Este guia fornece instruções sobre como instalar o Docker em diferentes sistem
    #### bash:
      docker --version
 
-   
+# Como configurar
+Este guia fornece instruções sobre como configurar o servidor, o dispositivo e o cliente. Isso deve ser feito nesta ordem.
 ## Como configurar o servidor usando Docker
    #### No terminal, digite:
-    1. git clone https://github.com/alexsami-lopes/Digital-Systems-Project-1.git
-    2. cd Digital-Systems-Project-1/server
+    1. git clone https://github.com/alexsami-lopes/Networking-Project-1.git
+    2. cd Networking-Project-1/server
     3. docker build -t server .
     4. docker container run -it --network host server
 
 ## Como configurar o dispositivo usando Docker
    #### No terminal, digite:
-    1. git clone https://github.com/alexsami-lopes/Digital-Systems-Project-1.git
-    2. cd Digital-Systems-Project-1/device
+    1. git clone https://github.com/alexsami-lopes/Networking-Project-1.git
+    2. cd Networking-Project-1/device
     3. docker build -t device .
     4. docker container run -it --network host device
 
 ## Como configurar o cliente usando Docker
    #### No terminal, digite:
-    1. git clone https://github.com/alexsami-lopes/Digital-Systems-Project-1.git
-    2. cd Digital-Systems-Project-1/clent
+    1. git clone https://github.com/alexsami-lopes/Networking-Project-1.git
+    2. cd Networking-Project-1/client
     3. docker build -t meu-nginx .
     4. docker run -d -p 8080:80 meu-nginx
-
+    
+# Como executar o Aplicativo
+Este guia fornece instruções sobre como executar o aplicativo para recuperar dados do dispositivo através do servidor.
 ## Como executar o cliente
    #### Na url do navegador, digite:
     1. http://localhost:8080/client.html
@@ -97,13 +105,15 @@ Este guia fornece instruções sobre como instalar o Docker em diferentes sistem
 ### Clique em "Temperature" e em outros botões e aguarde alguns segundos para receber dados do dispositivo
 [Imagem da GUI do Cliente em uso](#image-of-the-client-gui-in-use)
 
-# Imagem do Servidor em uso
+# Imagens
+Imagens mostrando o servidor, o dispositivo e o cliente sendo utilizados.
+## Imagem do Servidor em uso
 <img src="images/image-server-in-use.jpg" alt="Server" width="1671" height="846">
 
-# Imagem do Dispositivo em uso
+## Imagem do Dispositivo em uso
 <img src="images/image-device-in-use.jpg" alt="Device" width="1671" height="446">
 
-# Imagem da GUI do Cliente em uso
+## Imagem da GUI do Cliente em uso
 <img src="images/image-client-in-use.jpg" alt="Client-GUI" width="969" height="645">
 
 
