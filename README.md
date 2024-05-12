@@ -27,7 +27,7 @@ This software simulates a device equipped with a temperature sensor that control
 6. [Images](#images)
    - [Image of the Server in use](#image-of-the-server-in-use)
    - [Image of the Device in use](#image-of-the-device-in-use)
-   - [Image of the Client in use](#image-of-the-client-gui-in-use)
+   - [Image of the Client GUI in use](#image-of-the-client-gui-in-use)
 7. [Final Analysis](#final-analysis)
 8. [Additional research material used in this project](#additional-research-material-used-in-this-project)
 
