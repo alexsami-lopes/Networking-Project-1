@@ -88,7 +88,7 @@ This guide provides instructions on how to set the server, the device and the cl
 ## How to set up the client using Docker
    #### On the terminal type:
     1. git clone https://github.com/alexsami-lopes/Networking-Project-1.git
-    2. cd Networking-Project-1/clent
+    2. cd Networking-Project-1/client
     3. docker build -t meu-nginx .
     4. docker run -d -p 8080:80 meu-nginx
     
