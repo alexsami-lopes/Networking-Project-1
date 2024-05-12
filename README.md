@@ -105,7 +105,7 @@ This guide provides instructions on how to run the application to retrieve data 
    #### On the "IP do Dispositivo (IPv4)" box copy and past the address of the device given to you in your device terminal (without port) as seen on the [Image of the Device in use](#image-of-the-device-in-use) in use, example:
     1. 172.16.103.9
 
-### Click on "Temperature" and other butons and wait a few seconds to receive data from the device
+### Click on "Solicitar Temperatura" and other butons and wait a few seconds to receive data from the device
 [Image of the Client GUI in use](#image-of-the-client-gui-in-use)
 
 # Images
