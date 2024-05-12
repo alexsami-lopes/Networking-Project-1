@@ -47,9 +47,9 @@ Este guia fornece instruções sobre como instalar o Docker em diferentes sistem
 
    #### Para verificar se a instalação foi bem-sucedida, execute:
     docker --version 
-### [Site oficial do Docker](https://docs.docker.com/desktop/install/windows-install/)    
+### [Site Oficial do Docker](https://docs.docker.com/desktop/install/windows-install/)    
 ## Instalação do Docker no Windows
-    1. Baixe o instalador do Docker Desktop para Windows no Site oficial do Docker: Docker Desktop for Windows
+    1. Baixe o instalador do Docker Desktop para Windows no Site Oficial do Docker: Docker Desktop for Windows
     2. Execute o instalador baixado e siga as instruções na tela.
     3. Após a instalação, o Docker Desktop será iniciado automaticamente. Aguarde até que o Docker Desktop seja totalmente inicializado.
     4. Verifique se a instalação foi bem-sucedida abrindo o PowerShell ou CMD e executando:
@@ -57,7 +57,7 @@ Este guia fornece instruções sobre como instalar o Docker em diferentes sistem
      docker --version
 
 ## Instalação do Docker no macOS
-    1. Baixe o instalador do Docker Desktop para macOS no site oficial do Docker: Docker Desktop for Mac
+    1. Baixe o instalador do Docker Desktop para macOS no Site Oficial do Docker: Docker Desktop for Mac
     2. Abra o arquivo .dmg baixado.
     3. Arraste o ícone do Docker para a pasta Aplicativos.
     4. Abra o Docker a partir do Launchpad ou Finder.
