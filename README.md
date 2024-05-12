@@ -17,13 +17,19 @@ This software simulates a device equipped with a temperature sensor that control
    - [Docker Installation on Linux](#docker-installation-on-linux)
    - [Docker Installation on Windows](#docker-installation-on-windows)
    - [Docker Installation on macOS](#docker-installation-on-macos)
-4. [How to set up the server using Docker](#how-to-set-up-the-server-using-docker)
-5. [How to set up the device using Docker](#how-to-set-up-the-device-using-docker)
-6. [How to set up the client using Docker](#how-to-set-up-the-client-using-docker)
-7. [How to run the client](#how-to-run-the-client)
-8. [How to set up the client to connect to the server](#how-to-set-up-the-client-to-connect-to-the-server)
-9. [Final Analysis](#final-analysis)
-10. [Additional research material used in this project](#additional-research-material-used-in-this-project)
+4. [How to set up](#how-to-set-up)
+   - [How to set up the server using Docker](#how-to-set-up-the-server-using-docker)
+   - [How to set up the device using Docker](#how-to-set-up-the-device-using-docker)
+   - [How to set up the client using Docker](#how-to-set-up-the-client-using-docker)
+5. [How to Run the Application](#how-to-run-the-application) 
+   - [How to run the client](#how-to-run-the-client)
+   - [How to set up the client to connect to the server](#how-to-set-up-the-client-to-connect-to-the-server)
+6. [Images](#images)
+   - [Image of the Server in use](#image-of-the-server-in-use)
+   - [Image of the Device in use](#image-of-the-device-in-use)
+   - [Image of the Client in use](#image-of-the-client-in-use)
+7. [Final Analysis](#final-analysis)
+8. [Additional research material used in this project](#additional-research-material-used-in-this-project)
 
 ## Requirements
   * Docker installed
@@ -63,28 +69,31 @@ This guide provides instructions on how to install Docker on different operating
    #### bash:
      docker --version
 
-   
+# How to set up 
+This guide provides instructions on how to set the server, the device and the client. This has to be done in this order.
 ## How to set up the server using Docker
    #### On the terminal type:
-    1. git clone https://github.com/alexsami-lopes/Digital-Systems-Project-1.git
-    2. cd Digital-Systems-Project-1/server
+    1. git clone https://github.com/alexsami-lopes/Networking-Project-1.git
+    2. cd Networking-Project-1/server
     3. docker build -t server .
     4. docker container run -it --network host server
 
 ## How to set up the device using Docker
    #### On the terminal type:
-    1. git clone https://github.com/alexsami-lopes/Digital-Systems-Project-1.git
-    2. cd Digital-Systems-Project-1/device
+    1. git clone https://github.com/alexsami-lopes/Networking-Project-1.git
+    2. cd Networking-Project-1/device
     3. docker build -t device .
     4. docker container run -it --network host device
 
 ## How to set up the client using Docker
    #### On the terminal type:
-    1. git clone https://github.com/alexsami-lopes/Digital-Systems-Project-1.git
-    2. cd Digital-Systems-Project-1/clent
+    1. git clone https://github.com/alexsami-lopes/Networking-Project-1.git
+    2. cd Networking-Project-1/clent
     3. docker build -t meu-nginx .
     4. docker run -d -p 8080:80 meu-nginx
-
+    
+# How to Run the Application 
+This guide provides instructions on how to run the application to retrieve data from the device through the server
 ## How to run the client
    #### On the browser url type:
     1. http://localhost:8080/client.html
@@ -99,13 +108,15 @@ This guide provides instructions on how to install Docker on different operating
 ### Click on "Temperature" and other butons and wait a few seconds to receive data from the device
 [Image of the Client GUI in use](#image-of-the-client-gui-in-use)
 
-# Image of the Server in use
+# Images
+Images showing the server, device and client being used.
+## Image of the Server in use
 <img src="images/image-server-in-use.jpg" alt="Server" width="1671" height="846">
 
-# Image of the Device in use
+## Image of the Device in use
 <img src="images/image-device-in-use.jpg" alt="Device" width="1671" height="446">
 
-# Image of the Client GUI in use
+## Image of the Client GUI in use
 <img src="images/image-client-in-use.jpg" alt="Client-GUI" width="969" height="645">
 
 # Final Analysis
