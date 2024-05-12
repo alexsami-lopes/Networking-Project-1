@@ -96,14 +96,14 @@ Este guia fornece instruções sobre como executar o aplicativo para recuperar d
     1. http://localhost:8080/client.html
     
 ## Como configurar o cliente para se conectar ao servidor
-   #### Na caixa "Endereço IP e Porta do Servidor (IP:Porta)", copie e cole o endereço do servidor Flask fornecido a você no terminal do servidor (na porta 9000), conforme visto na [Imagem do Servidor em uso](#image-of-the-server-in-use), exemplo:
+   #### Na caixa "Endereço IP e Porta do Servidor (IP:Porta)", copie e cole o endereço do servidor Flask fornecido a você no terminal do servidor (na porta 9000), conforme visto na [Imagem do Servidor em uso](#imagem-do-servidor-em-uso), exemplo:
     1. 172.16.103.8:9000
 
-   #### Na caixa "IP do Dispositivo (IPv4)", copie e cole o endereço do dispositivo fornecido a você no terminal do dispositivo (sem porta), conforme visto na [Imagem do Dispositivo em uso](#image-of-the-device-in-use), exemplo:
+   #### Na caixa "IP do Dispositivo (IPv4)", copie e cole o endereço do dispositivo fornecido a você no terminal do dispositivo (sem porta), conforme visto na [Imagem do Dispositivo em uso](#imagem-do-dispositivo-em-uso), exemplo:
     1. 172.16.103.9
 
-### Clique em "Temperature" e em outros botões e aguarde alguns segundos para receber dados do dispositivo
-[Imagem da GUI do Cliente em uso](#image-of-the-client-gui-in-use)
+### Clique em "Temperatura" e em outros botões e aguarde alguns segundos para receber dados do dispositivo
+[Imagem da GUI do Cliente em uso](#imagem-da-gui-do-cliente-em-uso)
 
 # Imagens
 Imagens mostrando o servidor, o dispositivo e o cliente sendo utilizados.
