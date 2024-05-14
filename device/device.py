@@ -66,7 +66,7 @@ class Dispositivo:
     def start_tcp_server(self):
         self.server_tcp_socket.bind((self.ip, self.port))
         self.server_tcp_socket.listen(5)
-        print(f"[STARTING] Server is running on {self.ip}:{self.port}")
+        print(f"[STARTING] Device is running on {self.ip}:{self.port}")
 
         while True:
             connection, address = self.server_tcp_socket.accept()
