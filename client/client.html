@@ -68,6 +68,7 @@ function sendRequest(url) {
 
     if (!isValidServerAddress(server_address) || !isValidIPAddress(device_ip)) {
         alert("Por favor, insira um endereço IP e porta válidos para o servidor e um IP válido para o dispositivo.");
+        clearInterval(temperatureInterval);
         return;
     }
 
